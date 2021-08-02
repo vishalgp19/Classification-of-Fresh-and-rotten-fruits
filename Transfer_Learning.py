@@ -45,13 +45,13 @@ train_it = datagen.flow_from_directory(directory="data/fruits/train/",
                                        target_size=(224, 224),
                                        color_mode='rgb',
                                        class_mode="categorical",
-                                       batch_size=8)
+                                       batch_size=32)
 # load validation dataset
 valid_it = datagen.flow_from_directory(directory="data/fruits/valid/",
                                        target_size=(224, 224),
                                        color_mode='rgb',
                                        class_mode="categorical",
-                                       batch_size=8)
+                                       batch_size=32)
 
 # Train Model
 history = model.fit(train_it,
